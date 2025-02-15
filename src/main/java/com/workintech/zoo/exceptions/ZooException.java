@@ -6,17 +6,19 @@ import org.springframework.http.HttpStatus;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class ZooException extends RuntimeException{
-    private final HttpStatus status;
+public class ZooException extends RuntimeException {
+    private HttpStatus httpStatus;
 
-    public ZooException(String message, HttpStatus status) {
+    public ZooException(String message, HttpStatus httpStatus) {
         super(message);
-        this.status = status;
+        this.httpStatus = httpStatus;
     }
 
-    public HttpStatus getStatus() {
-        return status;
+    public HttpStatus getHttpStatus() {
+        return httpStatus;
     }
 
-
+    public void setHttpStatus(HttpStatus httpStatus) {
+        this.httpStatus = httpStatus;
+    }
 }
