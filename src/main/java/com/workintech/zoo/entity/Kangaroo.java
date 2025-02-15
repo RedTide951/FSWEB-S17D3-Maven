@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
 public class Kangaroo {
     private int id;
     private String name;
@@ -13,6 +12,15 @@ public class Kangaroo {
     private Double sleepHour;
     private String gender;
     private Boolean isAggressive;
+
+    public Kangaroo(int id, String name, Double height, Double weight, Double sleepHour, String gender, Boolean isAggressive) {
+        this.id = id;
+        this.name = name;
+        this.weight = weight;
+        this.sleepHour = sleepHour;
+        this.gender = gender;
+        this.isAggressive = isAggressive;
+    }
 
     public int getId() {
         return id;
